@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title Chat
+    = %w{ http://code.jquery.com/jquery-1.9.1.min.js
+          /js/es-poly-remy.js /__coffee__/chat.js }.each do |src|
+      %script{ type: 'text/javascript', src: src }
+  %body
+    .form
+      %label{ for: 'user' } User:
+      %input{ type: 'text', id: 'user', name: 'user' }
+      %label{ for: 'message' } Message:
+      %input{ type: 'text', id: 'message', name: 'message' }
+      %input{ type: 'button', id: 'send', value: 'Send.' }
+    %ul#messages
