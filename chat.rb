@@ -16,6 +16,12 @@ require 'sinatra/base'
 
 class Chat < Sinatra::Base
 
+  SCRIPTS = %w{
+    http://code.jquery.com/jquery-1.9.1.min.js
+    /js/es-poly-remy.js
+    /__coffee__/chat.js
+  }
+
   set :server, :thin
   connections = []
 

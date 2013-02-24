@@ -2,8 +2,7 @@
 %html
   %head
     %title Chat
-    = %w{ http://code.jquery.com/jquery-1.9.1.min.js
-          /js/es-poly-remy.js /__coffee__/chat.js }.each do |src|
+    - SCRIPTS.each do |src|
       %script{ type: 'text/javascript', src: src }
   %body
     .form
